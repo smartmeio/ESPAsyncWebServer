@@ -408,6 +408,8 @@ class AsyncWebServer {
     void begin();
     void end();
 
+    uint8_t status() { return _server.status;}
+
 #if ASYNC_TCP_SSL_ENABLED
     void onSslFileRequest(AcSSlFileHandler cb, void* arg);
     void beginSecure(const char *cert, const char *private_key_file, const char *password);
